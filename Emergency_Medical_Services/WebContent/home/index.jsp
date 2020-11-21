@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,18 +10,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Book You ambulance</title>
-    <style>
+    <title>HumanKind</title>
+		<style>
 		body {
-		  background-image: url('https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlYWx0aHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=600&q=60');
+		  background-image: url('img.jpg');
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
 		  background-size: cover;
 		}
 		</style>
-  </head>
 
-<body>
+<link rel="stylesheet" type="text/css" href="home/style.css">
+  </head>
+  <body>
+    
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="#">HumanKind</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -62,65 +63,35 @@
 			
 		</div>
 	</nav>
-	
-	<div class="container">
+	<br>
+	<br>
 
-	<h2>Book your Ambulance</h2>
-	<div class="col-md-6 col-md-offset-3">
-			<div class="alert alert-success center" role="alert">
-				<p>${NOTIFICATION}</p>
-			</div>
-			
-		<form action="<%=request.getContextPath()%>/avail" method="post">
-
-					<div class="form-group">
-						<label for="uname">Name:</label> <input type="text"
-							class="form-control" id="uname" placeholder="Name"
-							name="Name" required>
-					</div>
-
-
-					<div class="form-group">
-						<label for="uname">Phone Number:</label> <input type="text"
-							class="form-control" id="phoneno" placeholder="Phone Number"
-							name="phoneno" required>
-					</div>
-
-					
-					<div class="form-group">
-						<label for="uname">Pick Up Location:</label> <input type="text"
-							class="form-control" id="pickup" placeholder="Pick Up"
-							name="pickup" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="uname">Drop Location:</label> <input type="text"
-							class="form-control" id="drop" placeholder="Drop"
-							name="drop" required>
-					</div>
-					
-							
-					<div class="form-group">
-   						 <label for="exampleFormControlSelect1">Ambulance type</label>
-   						 <select class="form-control" id="ambulancetype" name="AmbulanceType" required>
-     					 <option>AC</option>
-     					 <option>Non AC</option>
-    				  	 <option>ICU</option>
-     					 <option>Collective</option>
-   						 </select>
-                    </div>		
- 
-			
-                         <button type="submit" class="btn btn-primary">Submit</button>
-					     
-
-				</form>
-			</div>
-		</div>
-		<!-- </div> -->
-		<br>
-		<br>
-		<jsp:include page="../common/footer.jsp"></jsp:include>
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img src="img.jpg" class="d-block w-100" style="height: 550px;"alt="...">
+	    </div>
+	    <div class="carousel-item">
+	      <img src="stone.jpg" class="d-block w-100" style="height: 550px;"alt="...">
+	    </div>
+	    <div class="carousel-item">
+	      <img src="stone.jpg" class="d-block w-100" style="height: 550px;"alt="...">
+	    </div>
+	  </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
 
 	<!-- Optional JavaScript; choose one of the two! -->
 
@@ -133,13 +104,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
-	
-	
-	
-		
-	
-	
-
-	
-</body>
+  </body>
 </html>

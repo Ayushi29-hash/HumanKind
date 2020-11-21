@@ -43,7 +43,7 @@ public class AvailController extends HttpServlet {
 		String phoneno = request.getParameter("phoneno");
 		String pickup = request.getParameter("pickup");
 		String drop = request.getParameter("drop");
-		String vehicletype = request.getParameter("vehicletype");
+		String vehicle_type = request.getParameter("vehicle_type");
 		
 
 		Avail employee = new Avail();
@@ -51,12 +51,12 @@ public class AvailController extends HttpServlet {
 		employee.setPhoneno(phoneno);
 		employee.setPickup(pickup);
 		employee.setDrop(drop);
-		employee.setVehicle_type(vehicletype);
+		employee.setVehicle_type(vehicle_type);
 		
 		
 
 		try {
-			int result = userDao.registeravail(employee);
+			int result = userDao.registerAvail(employee);
 			if(result == 1) {
 				request.setAttribute("NOTIFICATION", "We will provide your ambulance details shortly!");
 			}

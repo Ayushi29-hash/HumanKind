@@ -40,7 +40,9 @@
     </section>
     <br>
     <br>
-<footer class="container" >
+<div style="background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGJsb2d8ZW58MHx8MHw%3D&auto=format&fit=crop&w=600&q=60');">
+<footer class="container"  >
+
 	<div class="row">
 		<div class="col-sm-4">
 		<img src="spacelogo.jpg" class="img-fluid img-responsive">
@@ -67,3 +69,4 @@
 	<p class="text-center">Copyright &copy; Medica 2020. All rights reserved.</p>
 	<p class="text-center">Made with &hearts; in India</p>
 	</footer>
+	</div>
