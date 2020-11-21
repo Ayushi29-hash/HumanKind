@@ -1,0 +1,84 @@
+package net.ems.web;
+
+import java.io.IOException;
+import java.time.LocalDate;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+import net.ems.dao.Blood_DonorDao;
+import net.ems.model.Donor;
+
+
+@WebServlet("/donor")
+//public class DonorController {
+//	
+//}
+public class DonorController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private Blood_DonorDao userDao;
+
+	public void init() {
+		userDao = new Blood_DonorDao();
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		donor(request, response);
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.sendRedirect("donor/donor.jsp");
+		
+	}
+
+	private void donor(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String gender = request.getParameter("gender");
+		String age = request.getParameter("age");
+		LocalDate dob = LocalDate.parse(request.getParameter("dob"));
+		String bloodgrp = request.getParameter("bloodgrp");
+		String phoneno = request.getParameter("phoneno");
+		String state = request.getParameter("state");
+		String city = request.getParameter("city");
+		String aids = request.getParameter("aids");
+		String cancer = request.getParameter("cancer");
+		String pierce = request.getParameter("pierce");
+
+		Donor employee = new Donor();
+		employee.setFirstName(firstName);
+		employee.setLastName(lastName);
+		employee.setGender(gender);
+		employee.setAge(age);
+		employee.setDob(dob);
+		employee.setBloodgrp(bloodgrp);
+		employee.setPhoneno(phoneno);
+		employee.setState(state);
+		employee.setCity(city);
+		employee.setAids(aids);
+		employee.setCancer(cancer);
+		employee.setPierce(pierce);
+		
+
+		try {
+			int result = userDao.registerDonor(employee);
+			if(result == 1) {
+				request.setAttribute("NOTIFICATION", "User Registered Successfully!");
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("donor/donor.jsp");
+		dispatcher.forward(request, response);
+	}
+}
