@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -11,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Register</title>
+    <title>Book</title>
     <style>
 		body {
 		  background-image: url('https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlYWx0aHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=600&q=60');
@@ -19,7 +18,7 @@
 		  background-attachment: fixed;
 		  background-size: cover;
 		}
-		/*footer section*/
+		/footer section/
 			footer {
 				padding: 20px;
 				margin-top: 50px;
@@ -39,7 +38,7 @@
 				list-style: none;
 			}
 			
-			/*Contact Section*/
+			/Contact Section/
 			.contact-section {
 				margin-bottom: 20px;
 				display: flex;
@@ -137,66 +136,50 @@
 			
 		</div>
 	</nav>
-	
 	<div class="container">
 
-	<h2>Ambulance Register Form</h2>
+	<h2>Book your Ambulance</h2>
 	<div class="col-md-6 col-md-offset-3">
 			<div class="alert alert-success center" role="alert">
 				<p>${NOTIFICATION}</p>
+				<p>${NAME}</p>
+				<p>${PHONE}</p>
+				<p>${VNUM}</p>
+				<p>${VTYPE}</p>
 			</div>
 			
-		<form action="<%=request.getContextPath()%>/register" method="post">
-
+		 <form action="<%=request.getContextPath()%>/avail" method="post">
+             <!--   <form action="avail_process.jsp" method="post">  -->
 					<div class="form-group">
-						<label for="uname">First Name:</label> <input type="text"
-							class="form-control" id="uname" placeholder="first_name"
-							name="first_name" required>
+						<label for="uname">Name:</label> <input type="text"
+							class="form-control" id="name" placeholder="name"
+							name="name" required>
 					</div>
 
-					<div class="form-group">
-						<label for="uname">Last Name:</label> <input type="text"
-							class="form-control" id="last_name" placeholder="last Nname"
-							name="last_name" required>
-					</div>
 
 					<div class="form-group">
 						<label for="uname">Phone Number:</label> <input type="text"
-							class="form-control" id="phone_no" placeholder="Phone Number"
+							class="form-control" id="phone_no" placeholder="phone_no"
 							name="phone_no" required>
 					</div>
 
 					
-				
 					<div class="form-group">
-						<label>Date of Birth:</label> <input type="date"
-						value="<c:out value='${driver.dob}' />"class="form-control" id="dob" placeholder="Date of Birth"
-							name="dob" required>
+						<label for="uname">Pick Up Location:</label> <input type="text"
+							class="form-control" id="pick_up" placeholder="pick_up"
+							name="pick_up" required>
 					</div>
 					
 					<div class="form-group">
-						<label for="uname">Aadhar Number:</label> <input type="text"
-							class="form-control" id="aadhar_no" placeholder="Aadhar Number"
-							name="aadhar_no" required>
+						<label for="uname">Drop Location:</label> <input type="text"
+							class="form-control" id="drop" placeholder="drop"
+							name="drop" required>
 					</div>
 					
-					<div class="form-group">
-						<label for="uname">DL Number:</label> <input type="text"
-							class="form-control" id="dl_no" placeholder="DL Number"
-							name="dl_no" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="uname">Vehicle Number:</label> <input type="text"
-							class="form-control" id="vehicle_no" placeholder="Vehicle Number"
-							name="vehicle_no" required>
-					</div>
-					
-			
 							
 					<div class="form-group">
-   						 <label for="exampleFormControlSelect1">Vehicle type</label>
-   						 <select class="form-control" id="vehicle_type" name="vehicle_type" required>
+   						 <label for="exampleFormControlSelect1">Ambulance type</label>
+   						 <select class="form-control" id="ambulancetype" name="vehicle_type" required>
      					 <option>AC</option>
      					 <option>Non AC</option>
     				  	 <option>ICU</option>
@@ -204,14 +187,14 @@
    						 </select>
                     </div>		
  
-			
                          <button type="submit" class="btn btn-primary">Submit</button>
-					     
 
 				</form>
+
 			</div>
 		</div>
-		
+	
+			
 		<br>
 		<br>
 		
@@ -257,7 +240,7 @@
     <br>
     <br>
 <div style="background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGJsb2d8ZW58MHx8MHw%3D&auto=format&fit=crop&w=600&q=60');">
-<!-- <footer class="container"  >-->
+<footer class="container"  >
 
 	<div class="row">
 		<div class="col-sm-4">
@@ -284,7 +267,7 @@
 	<br>
 	<p class="text-center">Copyright &copy; Medica 2020. All rights reserved.</p>
 	<p class="text-center">Made with &hearts; in India</p>
-	<!-- </footer>-->
+	</footer>
 	</div>
 	
 </footer>

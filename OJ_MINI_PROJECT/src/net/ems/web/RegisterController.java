@@ -34,25 +34,26 @@ public class RegisterController extends HttpServlet  {
 	}
 
 	private void register(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		String phoneno = request.getParameter("phoneno");
+		String firstName = request.getParameter("first_name");
+		String lastName = request.getParameter("last_name");
+		String phoneno = request.getParameter("phone_no");
 		LocalDate dob = LocalDate.parse(request.getParameter("dob"));
-		String aadharno = request.getParameter("aadharno");
-		String dlno = request.getParameter("dlno");
-		String vehicleno = request.getParameter("vehicleno");
-		String vehicletype = request.getParameter("vehicletype");
+		String aadharno = request.getParameter("aadhar_no");
+		String dlno = request.getParameter("dl_no");
+		String vehicleno = request.getParameter("vehicle_no");
+		String vehicletype = request.getParameter("vehicle_type");
 		
 
 		Register driver = new Register();
 		driver.setFirstName(firstName);
 		driver.setLastName(lastName);
-		driver.getPhoneno();
-		driver.getDob();
-		driver.getAadharno();
-		driver.getDlno();
-		driver.getVehicleno();
-		driver.getVehicletype();
+		driver.setPhoneno(phoneno);
+		driver.setDob(dob);
+		driver.setAadharno(aadharno);
+		driver.setDlno(dlno);
+		driver.setVehicleno(vehicleno);
+		driver.setVehicletype(vehicletype);
+		
 		
 		
 

@@ -4,12 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import net.ems.model.Register;
 import net.ems.utils.JDBCUtils;
 
 public class Ambulance_RegisterDao {
 	public int registerDriver(Register driver) throws ClassNotFoundException {
-		String INSERT_USERS_SQL = "INSERT INTO users"
+		String INSERT_USERS_SQL = "INSERT INTO ojmini.driver"
 				+ "  (first_name, last_name, phone_no, dob, aadhar_no, dl_no, vehicle_no, vehicle_type ) VALUES "
 				+ " (?, ?, ?, ?, ?, ?, ?, ?);";
 		int result = 0;
@@ -37,8 +38,8 @@ public class Ambulance_RegisterDao {
 	}
 	
 	public Register registerDriver(String vtype) throws ClassNotFoundException {
-		String SELECT_USER_SQL = "SELECT first_name,phone_no,vehicle_no,vehicle_type FROM demo.users where vehicle_type=?";
-		Register driver = new Register();
+		String SELECT_USER_SQL = "SELECT first_name,phone_no,vehicle_no,vehicle_type FROM ojmini.driver where vehicle_type=?";
+		Register driver1 = new Register();
 		try (Connection connection = JDBCUtils.getConnection();
 				// Step 2:Create a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_SQL)) {
@@ -51,10 +52,10 @@ public class Ambulance_RegisterDao {
 				String vNo=resultop.getString("vehicle_no");
 				String vType=resultop.getString("vehicle_type");
 				
-				driver.setFirstName(fName);
-				driver.setPhoneno(pNo);
-				driver.setVehicleno(vNo);
-				driver.setVehicletype(vType);
+				driver1.setFirstName(fName);
+				driver1.setPhoneno(pNo);
+				driver1.setVehicleno(vNo);
+				driver1.setVehicletype(vType);
 			}
 		} catch (SQLException e) {
 			// process sql exception
@@ -62,7 +63,7 @@ public class Ambulance_RegisterDao {
 			JDBCUtils.printSQLException(e);
 			
 		}
-		return driver;
+		return driver1;
 	}
 
 
