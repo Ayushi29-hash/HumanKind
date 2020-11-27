@@ -2,6 +2,7 @@ package net.ems.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import net.ems.model.Donor;
@@ -42,6 +43,36 @@ public class Blood_DonorDao {
 			JDBCUtils.printSQLException(e);
 		}
 		return result;
+	}
+	
+	
+	public Donor registerDonor(String vtype) throws ClassNotFoundException {
+		String SELECT_DONOR_SQL = "SELECT first_name,gender,blood_grp,phone_no FROM demo.donor where blood_grp=?";
+		Donor donor1 = new Donor();
+		try (Connection connection = JDBCUtils.getConnection();
+				// Step 2:Create a statement using connection object
+				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_DONOR_SQL)) {
+			preparedStatement.setString(1, vtype);
+			ResultSet resultop = preparedStatement.executeQuery();
+			while (resultop.next()) {	
+				
+			    String fName=resultop.getString("first_name");
+			    String gNdr=resultop.getString("gender");
+				String bLd=resultop.getString("blood_grp");
+				String pNo=resultop.getString("phone_no");
+				
+				donor1.setFirstName(fName);
+				donor1.setGender(gNdr);
+				donor1.setBloodgrp(bLd);
+				donor1.setPhoneno(pNo);
+			}
+		} catch (SQLException e) {
+			// process sql exception
+			
+			JDBCUtils.printSQLException(e);
+			
+		}
+		return donor1;
 	}
 
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+	
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,22 +11,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>HumanKind</title>
-		<style>
+    <title>Donate Blood</title>
+    <style>
 		body {
-		  background-image: url('img.jpg');
+		  background-image: url('https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlYWx0aHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=600&q=60');
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
 		  background-size: cover;
 		}
 		</style>
-
-<link rel="stylesheet" type="text/css" href="home/style.css">
   </head>
-  <body>
-    
+<body>
+	
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="<%= request.getContextPath() %>/index">HumanKind</a>
+		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp">HumanKind</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -56,7 +55,8 @@
 					aria-expanded="false"> Blood </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%= request.getContextPath() %>/donor">Donor</a> <a
-							class="dropdown-item" href="<%= request.getContextPath() %>/recipient">Recipient</a>
+							class="dropdown-item" href="<%= request.getContextPath() %>/avail">Book</a>
+							
 						
 					</div></li>
 				
@@ -64,35 +64,104 @@
 			
 		</div>
 	</nav>
-	<br>
-	<br>
+	
+	<div class="container">
 
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-	  <ol class="carousel-indicators">
-	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-	  </ol>
-	  <div class="carousel-inner">
-	    <div class="carousel-item active">
-	      <img src="img.jpg" class="d-block w-100" style="height: 550px;"alt="...">
-	    </div>
-	    <div class="carousel-item">
-	      <img src="stone.jpg" class="d-block w-100" style="height: 550px;"alt="...">
-	    </div>
-	    <div class="carousel-item">
-	      <img src="stone.jpg" class="d-block w-100" style="height: 550px;"alt="...">
-	    </div>
-	  </div>
-	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	    <span class="sr-only">Previous</span>
-	  </a>
-	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	    <span class="sr-only">Next</span>
-	  </a>
-	</div>
+	<h2>Blood Recipient Register Form</h2>
+	<div class="col-md-6 col-md-offset-3">
+			<div class="alert alert-success center" role="alert">
+				<p>${NOTIFICATION}</p>
+				<p>${PHONE}</p>
+				<p>${VNUM}</p>
+				<p>${VTYPE}</p>
+			
+		        
+			</div>
+			 	
+		<form action="<%=request.getContextPath()%>/recipient" method="post">
+
+					<div class="form-group">
+						<label for="uname">First Name:</label> <input type="text"
+							class="form-control" id="uname" placeholder="First Name"
+							name="firstName" required>
+					</div>
+
+					<div class="form-group">
+						<label for="uname">Last Name:</label> <input type="text"
+							class="form-control" id="lastname" placeholder="last Name"
+							name="lastName" required>
+					</div>
+					
+					<div class="form-group">
+   						 <label for="exampleFormControlSelect1">Gender</label>
+   						 <select class="form-control" id="gender" name="gender" required>
+     					 <option> </option>
+     					 <option>Male</option>
+     					 <option>Female</option>     					 
+   						 </select>
+                    </div>	
+					
+					<div class="form-group">
+						<label for="uname">Age:</label> <input type="text"
+							class="form-control" id="age" placeholder="Age"
+							name="age" required>
+					</div>
+					
+					<div class="form-group">
+						<label>Date of Birth:</label> <input type="date"
+						value="<c:out value='${patient.dob}' />"class="form-control" id="dob" placeholder="Date of Birth"
+							name="dob" required>
+					</div>
+					
+					<div class="form-group">
+   						 <label for="exampleFormControlSelect1">Blood Group</label>
+   						 <select class="form-control" id="bloodgrp" name="bloodgrp" required>
+     					 <option> </option>
+     					 <option>A+</option>
+     					 <option>A-</option>
+    				  	 <option>B+</option>
+     					 <option>B-</option>
+     					 <option>AB+</option>
+     					 <option>AB-</option>
+     					 <option>O+</option>
+     					 <option>O-</option>
+   						 </select>
+                    </div>	
+
+					<div class="form-group">
+						<label for="uname">Phone Number:</label> <input type="text"
+							class="form-control" id="phoneno" placeholder="Phone Number"
+							name="phoneno" required>
+					</div>
+	
+					
+					
+					<div class="form-group">
+						<label for="uname">State:</label> <input type="text"
+							class="form-control" id="state" placeholder="State"
+							name="state" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="uname">City:</label> <input type="text"
+							class="form-control" id="city" placeholder="City"
+							name="city" required>
+					</div>
+					
+					 
+			
+                         <button type="submit" class="btn btn-primary">Submit</button>
+                        
+					     
+
+				</form>
+			</div>
+		</div>
+		
+		<br>
+		<br>
+		
+ <jsp:include page="../common/footer.jsp"></jsp:include>
 
 	<!-- Optional JavaScript; choose one of the two! -->
 
@@ -105,5 +174,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
-  </body>
+	
+	
+
+	
+</body>
+
 </html>
