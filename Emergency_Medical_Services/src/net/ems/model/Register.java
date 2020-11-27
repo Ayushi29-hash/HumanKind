@@ -16,6 +16,7 @@ public class Register implements Serializable {
 	private String dlno;
 	private String vehicleno;
 	private String vehicletype;
+	
 	public String getFirstName() {
 		return firstName;
 	}

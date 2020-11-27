@@ -2,6 +2,7 @@ package net.ems.web;
 
 import java.io.IOException;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,8 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import net.ems.dao.Ambulance_AvailDao;
-
+import net.ems.dao.Ambulane_RegisterDao;
 import net.ems.model.Avail;
+import net.ems.model.Register;
 
 
 
@@ -22,9 +24,10 @@ import net.ems.model.Avail;
 public class AvailController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Ambulance_AvailDao userDao;
-
+    private Ambulane_RegisterDao driverDao;
 	public void init() {
 		userDao = new Ambulance_AvailDao();
+		driverDao= new Ambulane_RegisterDao();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -52,13 +55,30 @@ public class AvailController extends HttpServlet {
 		employee.setPickup(pickup);
 		employee.setDrop(drop);
 		employee.setVehicle_type(vehicle_type);
-		
+		Register driver = new Register();
 		
 
 		try {
 			int result = userDao.registerAvail(employee);
+			
 			if(result == 1) {
+				driver=driverDao.registerEmployee(vehicle_type);
+				if (driver.getFirstName() == null)
+				{
+					request.setAttribute("NOTIFICATION","NotFound");
+				}
+				else {
+					
+				
+				//int result = userDao.
 				request.setAttribute("NOTIFICATION", "We will provide your ambulance details shortly!");
+				//Register driver = new Register();
+				//System.out.println("hello" +driver.getFirstName());
+				request.setAttribute("NOTIFICATION",driver.getFirstName());
+				request.setAttribute("PHONE",driver.getPhoneno());
+				request.setAttribute("VNUM",driver.getVehicleno());
+				request.setAttribute("VTYPE",driver.getVehicletype());
+				}
 			}
 			
 		} catch (Exception e) {
@@ -69,4 +89,5 @@ public class AvailController extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("avail/avail.jsp");
 		dispatcher.forward(request, response);
 	}
+	
 }

@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,10 +73,13 @@
 	<div class="col-md-6 col-md-offset-3">
 			<div class="alert alert-success center" role="alert">
 				<p>${NOTIFICATION}</p>
+				<p>${PHONE}</p>
+				<p>${VNUM}</p>
+				<p>${VTYPE}</p>
 			</div>
 			
-		<form action="<%=request.getContextPath()%>/avail" method="post">
-
+		 <form action="<%=request.getContextPath()%>/avail" method="post">
+             <!--   <form action="avail_process.jsp" method="post">  -->
 					<div class="form-group">
 						<label for="uname">Name:</label> <input type="text"
 							class="form-control" id="uname" placeholder="Name"
@@ -102,7 +109,7 @@
 							
 					<div class="form-group">
    						 <label for="exampleFormControlSelect1">Ambulance type</label>
-   						 <select class="form-control" id="ambulancetype" name="AmbulanceType" required>
+   						 <select class="form-control" id="ambulancetype" name="vehicle_type" required>
      					 <option>AC</option>
      					 <option>Non AC</option>
     				  	 <option>ICU</option>
@@ -110,11 +117,11 @@
    						 </select>
                     </div>		
  
-			
+			<label for="driver">Ambulance type</label>
                          <button type="submit" class="btn btn-primary">Submit</button>
-					     
 
-				</form>
+				
+
 			</div>
 		</div>
 		<!-- </div> -->

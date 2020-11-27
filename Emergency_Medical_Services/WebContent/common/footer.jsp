@@ -1,5 +1,5 @@
 
-<link href="../common/footerstyle.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}../common/footerstyle.css" rel="stylesheet" type="text/css">
 <section id="contact" class="contact-section">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

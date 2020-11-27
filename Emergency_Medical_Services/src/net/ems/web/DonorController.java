@@ -70,7 +70,8 @@ public class DonorController extends HttpServlet {
 		try {
 			int result = userDao.registerDonor(employee);
 			if(result == 1) {
-				request.setAttribute("NOTIFICATION", "User Registered Successfully!");
+				request.setAttribute("NOTIFICATION", "UsTESTer Registered Successfully!");
+				//request.setAttribute("driver", "drivername!");
 			}
 			
 		} catch (Exception e) {

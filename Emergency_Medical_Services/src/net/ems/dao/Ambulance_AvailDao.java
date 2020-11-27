@@ -2,11 +2,12 @@ package net.ems.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+//import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import net.ems.model.Avail;
 import net.ems.utils.JDBCUtils;
-
+//import net.ems.model.Register;
 
 //public class Ambulance_AvailDao {
 //	public int registeravail(Avail employee) throws ClassNotFoundException {
@@ -68,5 +69,53 @@ public class Ambulance_AvailDao {
 		}
 		return result;
 	}
+//	public Register registerAvailDetail(Avail employee) throws ClassNotFoundException {
+//        Register book = null;
+//        String sql = "SELECT * FROM book WHERE vehicle_type = ?";
+//       // int result1 = 0;
+//        //connect();
+//        try (Connection connection = JDBCUtils.getConnection();
+//				// Step 2:Create a statement using connection object
+//				PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+//			preparedStatement.setString(1, employee.getVehicle_type());
+//         
+//        
+////         ResultSet resultSet = preparedStatement.executeQuery();
+////         
+////        if (resultSet.next()) {
+////            String title = resultSet.getString("firstName");
+////            String author = resultSet.getString("phoneno");
+////            String price = resultSet.getString("vehicleno");
+////             
+////            book = new Register( title, author, price);
+////        }
+////         
+////        resultSet.close();
+////        preparedStatement.close();
+////         
+////        return book;
+////    }
+//        System.out.println(preparedStatement);
+//		// Step 3: Execute the query or update query
+//        ResultSet resultSet = preparedStatement.executeQuery();
+//        if (resultSet.next()) {
+//          String title = resultSet.getString("firstName");
+//          String author = resultSet.getString("phoneno");
+//          String price = resultSet.getString("vehicleno");
+//           
+//          book = new Register();
+//          book.setFirstName(title);
+//          book.setPhoneno(author);
+//          book.setVehicleno(price);
+//      }
+//       
+//
+//	} catch (SQLException e) {
+//		// process sql exception
+//		JDBCUtils.printSQLException(e);
+//	}
+//	return book;
+//	
+//}
 }
 

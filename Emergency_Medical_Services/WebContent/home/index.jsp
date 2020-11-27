@@ -25,7 +25,7 @@
   <body>
     
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">HumanKind</a>
+		<a class="navbar-brand" href="<%= request.getContextPath() %>/index">HumanKind</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
