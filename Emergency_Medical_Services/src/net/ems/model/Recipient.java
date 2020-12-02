@@ -1,3 +1,8 @@
+//package net.ems.model;
+//
+//public class Recipient {
+//
+//}
 package net.ems.model;
 
 //public class Recipient {
