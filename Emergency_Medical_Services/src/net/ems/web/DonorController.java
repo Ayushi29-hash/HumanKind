@@ -52,23 +52,23 @@ public class DonorController extends HttpServlet {
 		String cancer = request.getParameter("cancer");
 		String pierce = request.getParameter("pierce");
 
-		Donor employee = new Donor();
-		employee.setFirstName(firstName);
-		employee.setLastName(lastName);
-		employee.setGender(gender);
-		employee.setAge(age);
-		employee.setDob(dob);
-		employee.setBloodgrp(bloodgrp);
-		employee.setPhoneno(phoneno);
-		employee.setState(state);
-		employee.setCity(city);
-		employee.setAids(aids);
-		employee.setCancer(cancer);
-		employee.setPierce(pierce);
+		Donor blood = new Donor();
+		blood.setFirstName(firstName);
+		blood.setLastName(lastName);
+		blood.setGender(gender);
+		blood.setAge(age);
+		blood.setDob(dob);
+		blood.setBloodgrp(bloodgrp);
+		blood.setPhoneno(phoneno);
+		blood.setState(state);
+		blood.setCity(city);
+		blood.setAids(aids);
+		blood.setCancer(cancer);
+		blood.setPierce(pierce);
 		
 
 		try {
-			int result = userDao.registerDonor(employee);
+			int result = userDao.registerDonor(blood);
 			if(result == 1) {
 				request.setAttribute("NOTIFICATION", "UsTESTer Registered Successfully!");
 				//request.setAttribute("driver", "drivername!");
