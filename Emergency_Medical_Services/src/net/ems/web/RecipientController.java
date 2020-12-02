@@ -1,6 +1,3 @@
-
-
-
 package net.ems.web;
 
 import java.io.IOException;
@@ -45,20 +42,7 @@ public class RecipientController extends HttpServlet {
 	}
 
 	private void recipient(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-//		String Name = request.getParameter("Name");
-//		String phoneno = request.getParameter("phoneno");
-//		String pickup = request.getParameter("pickup");
-//		String drop = request.getParameter("drop");
-//		String vehicle_type = request.getParameter("vehicle_type");
-//		
-//
-//		Avail employee = new Avail();
-//		employee.setName(Name);
-//		employee.setPhoneno(phoneno);
-//		employee.setPickup(pickup);
-//		employee.setDrop(drop);
-//		employee.setVehicle_type(vehicle_type);
-//		Register driver = new Register();
+
 		
 		
 		String firstName = request.getParameter("firstName");
@@ -71,21 +55,21 @@ public class RecipientController extends HttpServlet {
 		String state = request.getParameter("state");
 		String city = request.getParameter("city");
 		
-		Recipient employee = new Recipient();
-		employee.setFirstName(firstName);
-		employee.setLastName(lastName);
-		employee.setGender(gender);
-		employee.setAge(age);
-		employee.setDob(dob);
-		employee.setBloodgrp(bloodgrp);
-		employee.setPhoneno(phoneno);
-		employee.setState(state);
-		employee.setCity(city);
+		Recipient PAT = new Recipient();
+		PAT.setFirstName(firstName);
+		PAT.setLastName(lastName);
+		PAT.setGender(gender);
+		PAT.setAge(age);
+		PAT.setDob(dob);
+		PAT.setBloodgrp(bloodgrp);
+		PAT.setPhoneno(phoneno);
+		PAT.setState(state);
+		PAT.setCity(city);
 
 		Donor patient= new Donor();
 
 		try {
-			int result = userDao.registerRecipient(employee);
+			int result = userDao.registerRecipient(PAT);
 			
 			if(result == 1) {
 				patient=driverDao.registerDonor(bloodgrp);
