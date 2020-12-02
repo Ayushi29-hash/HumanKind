@@ -6,10 +6,11 @@
 	id="WebApp_ID" version="3.1">
 	<display-name>Emergency Medical Services</display-name>
 	<welcome-file-list>
-    <welcome-file>register/register.jsp</welcome-file>
+    <welcome-file>home/index.jsp</welcome-file>
 	</welcome-file-list>
 	<error-page>
 		<exception-type>java.lang.Exception</exception-type>
 		<location>/Error.jsp</location>
 	</error-page>
+	
 </web-app>
