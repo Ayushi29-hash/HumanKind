@@ -1,7 +1,9 @@
 package net.ems.web;
 
 import java.io.IOException;
-
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.util.Random;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -49,17 +51,17 @@ public class AvailController extends HttpServlet {
 		String vehicle_type = request.getParameter("vehicle_type");
 		
 
-		Avail employee = new Avail();
-		employee.setName(Name);
-		employee.setPhoneno(phoneno);
-		employee.setPickup(pickup);
-		employee.setDrop(drop);
-		employee.setVehicle_type(vehicle_type);
+		Avail book = new Avail();
+		book.setName(Name);
+		book.setPhoneno(phoneno);
+		book.setPickup(pickup);
+		book.setDrop(drop);
+		book.setVehicle_type(vehicle_type);
 		Register driver = new Register();
 		
 
 		try {
-			int result = userDao.registerAvail(employee);
+			int result = userDao.registerAvail(book);
 			
 			if(result == 1) {
 				driver=driverDao.registerEmployee(vehicle_type);
@@ -68,6 +70,14 @@ public class AvailController extends HttpServlet {
 					request.setAttribute("NOTIFICATION","NotFound");
 				}
 				else {
+					Random rand = new Random();
+					double rand_int1 = rand.nextDouble()*20; 
+					 DecimalFormat df = new DecimalFormat("#");
+				        df.setRoundingMode(RoundingMode.CEILING);
+					double Km=rand_int1;
+					double fare=0;
+					int a=1,basic=0;
+					String str1 = "AC",str2="Non AC",str3="ICU";
 					
 				
 				//int result = userDao.
@@ -78,7 +88,55 @@ public class AvailController extends HttpServlet {
 				request.setAttribute("PHONE",driver.getPhoneno());
 				request.setAttribute("VNUM",driver.getVehicleno());
 				request.setAttribute("VTYPE",driver.getVehicletype());
+				
+				if(driver.getVehicletype().equals(str1))
+				{
+					basic=250;
+					if (Km <= 5)
+						fare = (Km * 50)+basic;
+					else if (Km > 5 && Km <= 10)
+					{
+						fare = 5 * 50;
+						fare = fare + ((Km - 5) * 70)+basic;
+					} else
+					{
+						fare = (Km - 10) * 80;
+						fare = fare + 5 * 50;
+						fare = fare + (5 * 70)+basic;
+					}
+					request.setAttribute("FARE",df.format(fare));
 				}
+				if(driver.getVehicletype().equals(str2))
+				{
+					basic=500;
+					if (Km <= 5)
+						fare = (Km * 50) + basic;
+					else if (Km > 5 && Km <= 10) {
+						fare = 5 * 50;
+						fare = fare + ((Km - 5) * 70) + basic;
+					} else {
+						fare = (Km - 10) * 80;
+						fare = fare + 5 * 50;
+						fare = fare + (5 * 70) + basic;
+					}
+					request.setAttribute("FARE",df.format(fare));
+				}
+				if(driver.getVehicletype().equals(str3))
+				{
+					basic = 750;
+					if (Km <= 5)
+						fare = (Km * 50) + basic;
+					else if (Km > 5 && Km <= 10) {
+						fare = 5 * 50;
+						fare = fare + ((Km - 5) * 70) + basic;
+					} else {
+						fare = (Km - 10) * 80;
+						fare = fare + 5 * 50;
+						fare = fare + (5 * 70) + basic;
+					}
+					request.setAttribute("FARE",df.format(fare));
+				}
+			}
 			}
 			
 		} catch (Exception e) {
