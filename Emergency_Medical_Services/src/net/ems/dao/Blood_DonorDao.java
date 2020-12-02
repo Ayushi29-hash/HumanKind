@@ -9,7 +9,7 @@ import net.ems.model.Donor;
 import net.ems.utils.JDBCUtils;
 
 public class Blood_DonorDao {
-	public int registerDonor(Donor employee) throws ClassNotFoundException {
+	public int registerDonor(Donor blood) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO donor"
 				+ "  (first_name, last_name, gender, age, dob, blood_grp, phone_no, state, city , aids, cancer, pierce) VALUES "
 				+ " (?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ? , ?);";
@@ -18,18 +18,18 @@ public class Blood_DonorDao {
 		try (Connection connection = JDBCUtils.getConnection();
 				// Step 2:Create a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
-			preparedStatement.setString(1, employee.getFirstName());
-			preparedStatement.setString(2, employee.getLastName());
-			preparedStatement.setString(3, employee.getGender());
-			preparedStatement.setString(4, employee.getAge());
-			preparedStatement.setDate(5, JDBCUtils.getSQLDate(employee.getDob()));
-			preparedStatement.setString(6, employee.getBloodgrp());
-			preparedStatement.setString(7, employee.getPhoneno());
-			preparedStatement.setString(8, employee.getState());
-			preparedStatement.setString(9, employee.getCity());
-			preparedStatement.setString(10, employee.getAids());
-			preparedStatement.setString(11, employee.getCancer());
-			preparedStatement.setString(12, employee.getPierce());
+			preparedStatement.setString(1, blood.getFirstName());
+			preparedStatement.setString(2, blood.getLastName());
+			preparedStatement.setString(3, blood.getGender());
+			preparedStatement.setString(4, blood.getAge());
+			preparedStatement.setDate(5, JDBCUtils.getSQLDate(blood.getDob()));
+			preparedStatement.setString(6, blood.getBloodgrp());
+			preparedStatement.setString(7, blood.getPhoneno());
+			preparedStatement.setString(8, blood.getState());
+			preparedStatement.setString(9, blood.getCity());
+			preparedStatement.setString(10, blood.getAids());
+			preparedStatement.setString(11, blood.getCancer());
+			preparedStatement.setString(12, blood.getPierce());
 			
 			
 			
@@ -44,15 +44,13 @@ public class Blood_DonorDao {
 		}
 		return result;
 	}
-	
-	
-	public Donor registerDonor(String vtype) throws ClassNotFoundException {
-		String SELECT_DONOR_SQL = "SELECT first_name,gender,blood_grp,phone_no FROM demo.donor where blood_grp=?";
+	public Donor registerDonor(String btype) throws ClassNotFoundException {
+		String SELECT_DONOR_SQL = "SELECT first_name,gender,blood_grp,phone_no FROM demo.donor where blood_grp=? ORDER BY RAND()";
 		Donor donor1 = new Donor();
 		try (Connection connection = JDBCUtils.getConnection();
 				// Step 2:Create a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_DONOR_SQL)) {
-			preparedStatement.setString(1, vtype);
+			preparedStatement.setString(1, btype);
 			ResultSet resultop = preparedStatement.executeQuery();
 			while (resultop.next()) {	
 				
