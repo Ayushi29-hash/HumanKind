@@ -14,11 +14,115 @@
     <title>Donate Blood</title>
     <style>
 		body {
-		  background-image: url('https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlYWx0aHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=600&q=60');
+		  background-image: url('RequestBlood1.jpg');
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
 		  background-size: cover;
 		}
+		* {
+				font-family: 'Nunito', sans-serif;
+			}
+			
+			/*Service Section*/
+			#services_offered {
+				margin-top: 30px;
+			}
+			
+			.services-column {
+				padding: 20px;
+				text-align: center;
+			}
+			
+			.services-content {
+				margin-top: 20px;
+			}
+			
+			/*Gallery section*/
+			#gallery {
+				margin-top: 100px;
+			}
+			
+			.img-container {
+				text-align: center;
+			}
+			
+			button {
+				margin-top: 100px;
+			}
+			
+			/*footer section*/
+			footer {
+				padding: 20px;
+				margin-top: 50px;
+				
+				color: #ffffff;
+			}
+			
+			.footer-link {
+				color: white;
+			}
+			
+			.footer-link:hover {
+				color: white;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			/*Contact Section*/
+			.contact-section {
+				margin-bottom: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				width: 100%;
+				height: 60vh;
+				padding: 0 2rem;
+				background-image:
+					url('bg11.jpg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				color: black;
+			}
+			
+			.contact-section-header>h2 {
+				font-size: 6rem;
+			}
+			
+			@media ( max-width : 28.75em) {
+				.contact-section-header>h2 {
+					font-size: 4rem;
+				}
+			}
+			
+			.contact-section-header>p {
+				font-style: italic;
+			}
+			
+			.contact-links {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				max-width: 980px;
+				margin-top: 4rem;
+				flex-wrap: wrap;
+			}
+			
+			.contact-details {
+				font-size: 2.4rem;
+				text-shadow: 2px 2px 1px #1f1f1f;
+				transition: transform 0.3s ease-out;
+			}
+			
+			.contact-details:hover {
+				transform: translateY(8px);
+				text-decoration: underline;
+			}
 		</style>
   </head>
 <body>
@@ -55,10 +159,10 @@
 					aria-expanded="false"> Blood </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%= request.getContextPath() %>/donor">Donor</a> <a
-							class="dropdown-item" href="<%= request.getContextPath() %>/avail">Book</a>
+							class="dropdown-item" href="<%= request.getContextPath() %>/recipient">Recipient</a>
 						
 					</div></li>
-				
+				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/about/about.jsp">About</a></li>
 			</ul>
 			
 		</div>
@@ -166,7 +270,7 @@
                     </div>	
                     
                     <div class="form-group">
-   						 <label for="exampleFormControlSelect1">Have you pierced ear/body ?</label>
+   						 <label for="exampleFormControlSelect1">Have you donated blood in past 4 months?</label>
    						 <select class="form-control" id="pierce" name="pierce" required>
      					 <option> </option>
      					 <option>Yes</option>
@@ -187,7 +291,76 @@
 		<br>
 		<br>
 		
- <jsp:include page="../common/footer.jsp"></jsp:include>
+			<section id="contact" class="contact-section">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <div class="contact-section-header">
+        <h2>Let's turn the page...</h2>
+        <p>Don't let fear cloud your judgement</p>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.facebook.com/"
+           target="_blank"
+           class="btn contact-details"
+           ><i class="fa fa-facebook-square"></i></a>
+       <a href="https://www.instagram.com/"
+           target="_blank"
+           class="btn contact-details"
+           ><i class="fa fa-instagram"></i></a>
+        <a
+           href="https://twitter.com/"
+           target="_blank"
+           class="btn contact-details"
+           ><i class="fa fa-twitter"></i>
+          </a>
+          
+        <a href="mailto:justdoit@mail.com"
+           class="btn contact-details"
+           ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+</svg></a>
+          
+          <br>
+          
+
+      </div>
+      <!-- <div>
+            <h5>Mail us: justdoit@gmail.com</h5>
+          </div> -->
+    </section>
+    <br>
+    <br>
+<div style="background-image: url('delivery1.jpg'); background-size: 100% 100%;">
+<footer class="container"  >
+
+	<div class="row">
+		<div class="col-sm-4">
+		<img src="promise4.jpg" class="img-fluid img-responsive">
+	</div>
+		<div class="col-sm-4 text-center" >
+			<h2 style="font-size: 24px;">Links</h2>
+			<hr style="border: 2px solid white; width: 50%">
+			
+			<a href="#" class="footer-link">About</a>
+			<br>
+			<a href="#" class="footer-link">Privacy Policy</a>
+			<br>
+			<a href="#" class="footer-link">Terms and Condition</a>
+	</div>
+		<div class="col-sm-4 text-center">
+			<h2 style="font-size: 24px;">Contact Us</h2>
+			<hr style="border: 2px solid white; width: 50%">
+			<p>Phone : 000000</p>
+			<p>Email : Medica@yourcare.com </p>
+
+		</div>
+	</div>
+	<br>
+	<p class="text-center">Copyright &copy; Medica 2020. All rights reserved.</p>
+	<p class="text-center">Made with &hearts; in India</p>
+	</footer>
+	</div>
 
 	<!-- Optional JavaScript; choose one of the two! -->
 
