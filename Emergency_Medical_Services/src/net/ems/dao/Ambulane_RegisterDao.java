@@ -42,7 +42,7 @@ public class Ambulane_RegisterDao {
 	}
 	
 	public Register registerEmployee(String vtype) throws ClassNotFoundException {
-		String SELECT_USER_SQL = "SELECT first_name,phone_no,vehicle_no,vehicle_type FROM demo.users where vehicle_type=?";
+		String SELECT_USER_SQL = "SELECT first_name,phone_no,vehicle_no,vehicle_type FROM demo.users where vehicle_type=? ORDER BY RAND()";
 		Register driver = new Register();
 		try (Connection connection = JDBCUtils.getConnection();
 				// Step 2:Create a statement using connection object
