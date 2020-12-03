@@ -20,7 +20,7 @@
 		}*/
 		
 		* {
-				font-family: 'Nunito', sans-serif;
+				font-family: 'Montserrat', sans-serif;
 			}
 			
 			/*Service Section*/
@@ -82,7 +82,7 @@
 				height: 60vh;
 				padding: 0 2rem;
 				background-image:
-					url('bg11.jpg');
+					url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
@@ -130,7 +130,7 @@
   </head>
   <body>
     
-	<nav class="navbar navbar-expand-lg   navbar-dark sticky-top" style="background-color: #fe6d73;">
+	<nav class="navbar navbar-expand-lg   navbar-dark sticky-top" style="background-color: #E78F8E;">
 		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp">HumanKind</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -141,12 +141,12 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="<%= request.getContextPath() %>/register">Register
+				<!-- <li class="nav-item active"><a class="nav-link" href="<%= request.getContextPath() %>/register">Register
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/avail">Avail</a></li>
 				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/donor">Donor</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/recipient">Recipient</a></li>
+				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/recipient">Recipient</a></li>-->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -180,7 +180,7 @@
 	  </ol>
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
-	      <img src="bg11.jpg" class="d-block w-100" style="height: 550px;"alt="...">
+	      <img src="https://www.ambipalm.com/home/images/slider-img/delivery1.jpg" class="d-block w-100" style="height: 550px;"alt="...">
 	    </div>
 	    <div class="carousel-item">
 	      <img src="mother-child.jpg" class="d-block w-100" style="height: 550px;"alt="...">
@@ -206,24 +206,17 @@
 		<h1 class="text-center">Services Offered</h1>
 		<hr>
 	<div class="row">
-		<div class="col-sm-4  services-column">
-			<img src="ambulance3.jpg" class="img-fluid img-responsive" width="50%">
-			<p class="services-content" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. </p></div>
-		<div class="col-sm-4 services-column">
-			<img src="help.jpg" class="img-fluid img-responsive" width="50%">
-			<p class="services-content" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitat services-columnion ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p></div>
-		<div class="col-sm-4 services-column">
-			<img src="promise4.jpg" class="img-fluid img-responsive" width="50%">
-			<p class="services-content" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. </p></div>
+		<div class="col-sm-6  services-column">
+			<img src="https://t4.ftcdn.net/jpg/02/71/94/89/240_F_271948928_GbzUmSklwxG4C8sD51ureB6aJeR29zZG.jpg" class="img-fluid img-responsive" width="100%" >
+			<p class="services-content" align="justify">With our 24*7 ambulance booking service, we ensure to make it quick and hassle-free by offering affordable ambulance booking service.
+We being your health partners will ensure you never waste those precious golden hours of emergency. You can book the emergency ambulance service from our app for your family or any stranger in distress.
+ </p></div>
+		<div class="col-sm-6 services-column">
+			<img src="https://t4.ftcdn.net/jpg/02/34/19/41/240_F_234194143_0FDtADzQgafk1YbxSyk7q0XLn162XF4O.jpg" class="img-fluid img-responsive" width="100%">
+			<p class="services-content" align="justify">Platform for receiving and donating Blood. 
+			Users can Request for Blood or Donate Blood. 
+			Using the Website, you can find Donors who are willing to Donate Blood and Recipients, who are in need of Blood </p></div>
+		
 	</div>
 	<hr>
 	<!-- <section id="serve">
@@ -253,62 +246,44 @@
             <br>
             <br>
 			-->
+			
+			<div class="media">
+				<img src="https://www.ambipalm.com/home/images/aboutus/ambulance3.jpg" class="mr-3" alt="..." width="500" height="250">
+				<div class="media-body">
+					
+					The human body is a natural machine. The machine tends to get ruptured and needs maintenance at times. Doctors are next to god! They save lives in times of crisis. Although, it is very difficult to get proper medical service at the time of emergency. Unfortunately, many lives are lost due to the unavailability of an ambulance on time. Although, the basic and advanced needs like food, clothes, house, etc. everything is available online and in the minimum time. But not a perfect app for ambulance service. The need of the hour is an ambulance service, Which can be easily accessible and can provide the best possible support in case of emergency the minimum time and cost
+				</div>
+			</div>
+			<hr>
+			
+			<div class="media">
+				<img src="https://t3.ftcdn.net/jpg/02/34/63/16/240_F_234631610_IjpDvwVKfvjHt4y3hnG7SywuVUOwbtTk.jpg" class="mr-3" alt="..." width="500" height="250">
+				<div class="media-body">
+					
+					 Build a strong community of a humanitarian cause.
+					 Needless to talk about the nobility of the cause of Blood Donation.
+					  Build a community where you help and get all others who wish to help come in a single platform.
+					   The donor list is by society and for society. So keep doing the good work and let more lives have a new boon of hope.
+				</div>
+			</div>
+			<hr>
+			<div class="media">
+				<img src="https://www.ambipalm.com/home/images/slider-img/help.jpg" class="mr-3" alt="..." width="500" height="250">
+				<div class="media-body">
+					
+					This is a very big question for many. How much more time? How long do we need to wait?
+					In a critical hour when you see your loved one suffering from pain, you feel every second is an hour.
+					 The wait seems never-ending and you start panicking and being restless. 
+					 The moment of helplessness, the agony of the difficult situation, the hope of some miracle- all of it builds up in your mind.
+					 Time is crucial.
+					 A lost time might mean a lost life. 
+					 An ailing patient needs the attendance of a doctor. 
+					 The sole purpose of an ambulance service is making the service of transportation easier without wasting any hour in any unnecessary obstacles.
+					  But so many times, finding a reliable service is difficult who knows the value of time.
+				</div>
+			</div>
+			
 
-	</section>
-	<!-- Gallery and Buy now-->
-	<section id="gallery" class="container">
-		<div class="row">
-			<div  class="img-container col-sm-6">
-				<img src="img_2.jpeg" class="img-fluid img-responsive" width="50%">
-			</div>
-			<div class="col-sm-6">
-				<p align="justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-			
-		</div>
-		<hr>
-		<div class="row">
-			
-			<div class="col-sm-6">
-				<p align="justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-			<div  class="img-container col-sm-6">
-				<img src="img3.jpeg" class="img-fluid img-responsive" width="50%">
-			</div>
-			
-		</div>
-		<hr>
-		<div class="row">
-			<div  class="img-container col-sm-6">
-				<img src="img_2.jpeg" class="img-fluid img-responsive" width="50%">
-			</div>
-			<div class="col-sm-6">
-				<p align="justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-			
-		</div>
-		
 	</section>
 	<br>
 	<br>
@@ -351,14 +326,13 @@
             <h5>Mail us: justdoit@gmail.com</h5>
           </div> -->
     </section>
-    <br>
-    <br>
-<div style="background-image: url('delivery1.jpg'); background-size: 100% 100%;">
+    
+<div style="background-image: url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg'); background-size: 100% 100%;">
 <footer class="container"  >
 
 	<div class="row">
 		<div class="col-sm-4">
-		<img src="promise4.jpg" class="img-fluid img-responsive">
+		<img src="..." class="img-fluid img-responsive">
 	</div>
 		<div class="col-sm-4 text-center" >
 			<h2 style="font-size: 24px;">Links</h2>
@@ -374,12 +348,12 @@
 			<h2 style="font-size: 24px;">Contact Us</h2>
 			<hr style="border: 2px solid white; width: 50%">
 			<p>Phone : 000000</p>
-			<p>Email : Medica@yourcare.com </p>
+			<p>Email : HumanKind@yourcare.com </p>
 
 		</div>
 	</div>
 	<br>
-	<p class="text-center">Copyright &copy; Medica 2020. All rights reserved.</p>
+	<p class="text-center">Copyright &copy; HumanKind 2020. All rights reserved.</p>
 	<p class="text-center">Made with &hearts; in India</p>
 	</footer>
 	</div>

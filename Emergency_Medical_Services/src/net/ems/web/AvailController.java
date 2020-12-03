@@ -67,7 +67,7 @@ public class AvailController extends HttpServlet {
 				driver=driverDao.registerEmployee(vehicle_type);
 				if (driver.getFirstName() == null)
 				{
-					request.setAttribute("NOTIFICATION","NotFound");
+					request.setAttribute("NOTIFICATION","Ambulance not available at the moment, try again later!");
 				}
 				else {
 					Random rand = new Random();
@@ -77,14 +77,14 @@ public class AvailController extends HttpServlet {
 					double Km=rand_int1;
 					double fare=0;
 					int a=1,basic=0;
-					String str1 = "AC",str2="Non AC",str3="ICU";
+					String str1 = "ALS",str2="BLS",str3="PTS";
 					
 				
 				//int result = userDao.
-				request.setAttribute("NOTIFICATION", "We will provide your ambulance details shortly!");
+				request.setAttribute("NOTIFICATION", "AMBULANCE DETAILS!");
 				//Register driver = new Register();
 				//System.out.println("hello" +driver.getFirstName());
-				request.setAttribute("NOTIFICATION",driver.getFirstName());
+				request.setAttribute("NAME",driver.getFirstName());
 				request.setAttribute("PHONE",driver.getPhoneno());
 				request.setAttribute("VNUM",driver.getVehicleno());
 				request.setAttribute("VTYPE",driver.getVehicletype());

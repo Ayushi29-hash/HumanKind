@@ -75,19 +75,20 @@ public class RecipientController extends HttpServlet {
 				patient=driverDao.registerDonor(bloodgrp);
 				if (patient.getFirstName() == null)
 				{
-					request.setAttribute("NOTIFICATION","NotFound");
+					request.setAttribute("NOTIFICATION","Blood Group Not Available");
 				}
 				else {
 					
 				
 				//int result = userDao.
-				request.setAttribute("NOTIFICATION", "We will provide your ambulance details shortly!");
+				request.setAttribute("NOTIFICATION", "DONOR DETAILS");
 				//Register driver = new Register();
 				//System.out.println("hello" +driver.getFirstName());
-				request.setAttribute("NOTIFICATION",patient.getFirstName());
-				request.setAttribute("PHONE",patient.getBloodgrp());
-				request.setAttribute("VNUM",patient.getPhoneno());
-				request.setAttribute("VTYPE",patient.getCity());
+				request.setAttribute("NAME",patient.getFirstName());
+				request.setAttribute("VTYPE",patient.getGender());
+				request.setAttribute("VNUM",patient.getBloodgrp());
+				request.setAttribute("PHONE",patient.getPhoneno());
+				
 				}
 			}
 			

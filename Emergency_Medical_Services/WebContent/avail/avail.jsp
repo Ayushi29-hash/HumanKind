@@ -18,13 +18,13 @@
     <title>Book You ambulance</title>
     <style>
 		body {
-		  background-image: url('BLS2.jpg');
+		  background-image: url('bg11.jpg');
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
 		  background-size: cover;
 		}
 		* {
-				font-family: 'Nunito', sans-serif;
+				font-family: 'Montserrat', sans-serif;
 			}
 			
 			/*Service Section*/
@@ -86,7 +86,7 @@
 				height: 60vh;
 				padding: 0 2rem;
 				background-image:
-					url('bg11.jpg');
+					url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
@@ -172,12 +172,13 @@
 		</div>
 	</nav>
 	
-	<div class="container">
+	<div class="container" style="color:white;">
 
 	<h2>Book your Ambulance</h2>
 	<div class="col-md-6 col-md-offset-3">
 			<div class="alert alert-success center" role="alert">
 				<p>${NOTIFICATION}</p>
+				<p>${NAME}</p>
 				<p>${PHONE}</p>
 				<p>${VNUM}</p>
 				<p>${VTYPE}</p>
@@ -230,7 +231,8 @@
 			</div>
 		</div>
 		<!-- </div> -->
-		<br>
+		
+	<br>
 		<br>
 			<section id="contact" class="contact-section">
         
@@ -270,14 +272,13 @@
             <h5>Mail us: justdoit@gmail.com</h5>
           </div> -->
     </section>
-    <br>
-    <br>
-<div style="background-image: url('delivery1.jpg'); background-size: 100% 100%;">
+    
+<div style="background-image: url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg'); background-size: 100% 100%;">
 <footer class="container"  >
 
 	<div class="row">
 		<div class="col-sm-4">
-		<img src="promise4.jpg" class="img-fluid img-responsive">
+		<img src="..." class="img-fluid img-responsive">
 	</div>
 		<div class="col-sm-4 text-center" >
 			<h2 style="font-size: 24px;">Links</h2>
@@ -293,12 +294,12 @@
 			<h2 style="font-size: 24px;">Contact Us</h2>
 			<hr style="border: 2px solid white; width: 50%">
 			<p>Phone : 000000</p>
-			<p>Email : Medica@yourcare.com </p>
+			<p>Email : HumanKind@yourcare.com </p>
 
 		</div>
 	</div>
 	<br>
-	<p class="text-center">Copyright &copy; Medica 2020. All rights reserved.</p>
+	<p class="text-center">Copyright &copy; HumanKind 2020. All rights reserved.</p>
 	<p class="text-center">Made with &hearts; in India</p>
 	</footer>
 	</div>

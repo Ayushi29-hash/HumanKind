@@ -11,17 +11,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Donate Blood</title>
+    <title>Recipient</title>
     <style>
 		body {
-		  background-image: url('delivery1.jpg');
+		  background-image: url('Request.jpg');
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
 		  background-size: cover;
 		}
 		
 		* {
-				font-family: 'Nunito', sans-serif;
+				font-family: 'Montserrat', sans-serif;
 			}
 			
 			/*Service Section*/
@@ -83,7 +83,7 @@
 				height: 60vh;
 				padding: 0 2rem;
 				background-image:
-					url('bg11.jpg');
+					url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
@@ -172,10 +172,11 @@
 	
 	<div class="container">
 
-	<h2>Blood Recipient Register Form</h2>
+	<h2>Blood Recipient Form</h2>
 	<div class="col-md-6 col-md-offset-3">
 			<div class="alert alert-success center" role="alert">
 				<p>${NOTIFICATION}</p>
+				<p>${NAME}</p>
 				<p>${PHONE}</p>
 				<p>${VNUM}</p>
 				<p>${VTYPE}</p>
@@ -256,10 +257,11 @@
 					 
 			
                          <button type="submit" class="btn btn-primary">Submit</button>
-                        
-					     
+				
 
-				</form>
+
+
+			</form>
 			</div>
 		</div>
 		
@@ -304,14 +306,13 @@
             <h5>Mail us: justdoit@gmail.com</h5>
           </div> -->
     </section>
-    <br>
-    <br>
-<div style="background-image: url('delivery1.jpg'); background-size: 100% 100%;">
+    
+<div style="background-image: url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg'); background-size: 100% 100%;">
 <footer class="container"  >
 
 	<div class="row">
 		<div class="col-sm-4">
-		<img src="promise4.jpg" class="img-fluid img-responsive">
+		<img src="..." class="img-fluid img-responsive">
 	</div>
 		<div class="col-sm-4 text-center" >
 			<h2 style="font-size: 24px;">Links</h2>
@@ -327,16 +328,15 @@
 			<h2 style="font-size: 24px;">Contact Us</h2>
 			<hr style="border: 2px solid white; width: 50%">
 			<p>Phone : 000000</p>
-			<p>Email : Medica@yourcare.com </p>
+			<p>Email : HumanKind@yourcare.com </p>
 
 		</div>
 	</div>
 	<br>
-	<p class="text-center">Copyright &copy; Medica 2020. All rights reserved.</p>
+	<p class="text-center">Copyright &copy; HumanKind 2020. All rights reserved.</p>
 	<p class="text-center">Made with &hearts; in India</p>
 	</footer>
 	</div>
-
 	<!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

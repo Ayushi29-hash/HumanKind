@@ -70,7 +70,7 @@ public class DonorController extends HttpServlet {
 		try {
 			int result = userDao.registerDonor(blood);
 			if(result == 1) {
-				request.setAttribute("NOTIFICATION", "UsTESTer Registered Successfully!");
+				request.setAttribute("NOTIFICATION", "Donor Registered Successfully!");
 				//request.setAttribute("driver", "drivername!");
 			}
 			
