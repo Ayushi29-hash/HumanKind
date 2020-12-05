@@ -131,7 +131,7 @@
   <body>
     
 	<nav class="navbar navbar-expand-lg   navbar-dark sticky-top" style="background-color: #E78F8E;">
-		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp">HumanKind</a>
+		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp"><strong>HumanKind</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -141,12 +141,12 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<!-- <li class="nav-item active"><a class="nav-link" href="<%= request.getContextPath() %>/register">Register
+				<!--  <li class="nav-item active"><a class="nav-link" href="<%= request.getContextPath() %>/register/register.jsp">Register
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/avail">Avail</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/donor">Donor</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/recipient">Recipient</a></li>-->
+				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/avail/avail.jsp">Avail</a></li>
+				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/donor/donor.jsp">Donor</a></li>
+				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/recipient/recipient.jsp">Recipient</a></li>-->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -166,6 +166,7 @@
 						
 					</div></li>
 					<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/about/about.jsp">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/contact/contact.jsp">Contact Us</a></li>
 			</ul>
 			
 		</div>
@@ -332,13 +333,13 @@ We being your health partners will ensure you never waste those precious golden 
 
 	<div class="row">
 		<div class="col-sm-4">
-		<img src="..." class="img-fluid img-responsive">
+		<img src="HumanKind.png" class="img-fluid img-responsive">
 	</div>
 		<div class="col-sm-4 text-center" >
 			<h2 style="font-size: 24px;">Links</h2>
 			<hr style="border: 2px solid white; width: 50%">
 			
-			<a href="#" class="footer-link">About</a>
+			<a href="<%= request.getContextPath() %>/about/about.jsp" class="footer-link">About</a>
 			<br>
 			<a href="#" class="footer-link">Privacy Policy</a>
 			<br>
@@ -347,7 +348,7 @@ We being your health partners will ensure you never waste those precious golden 
 		<div class="col-sm-4 text-center">
 			<h2 style="font-size: 24px;">Contact Us</h2>
 			<hr style="border: 2px solid white; width: 50%">
-			<p>Phone : 000000</p>
+			<p>Phone : 1800 XXXX 8888</p>
 			<p>Email : HumanKind@yourcare.com </p>
 
 		</div>

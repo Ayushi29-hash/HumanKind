@@ -84,10 +84,15 @@ public class AvailController extends HttpServlet {
 				request.setAttribute("NOTIFICATION", "AMBULANCE DETAILS!");
 				//Register driver = new Register();
 				//System.out.println("hello" +driver.getFirstName());
+				request.setAttribute("DRIVER","Driver Name:");
 				request.setAttribute("NAME",driver.getFirstName());
+				request.setAttribute("CONTACT","Contact:");
 				request.setAttribute("PHONE",driver.getPhoneno());
+				request.setAttribute("AMBU","Ambulance Number:");
 				request.setAttribute("VNUM",driver.getVehicleno());
+				request.setAttribute("NO","Ambulance Type:");
 				request.setAttribute("VTYPE",driver.getVehicletype());
+				request.setAttribute("PRICE","Please pay the below displayed fare in Indian Rupees");
 				
 				if(driver.getVehicletype().equals(str1))
 				{

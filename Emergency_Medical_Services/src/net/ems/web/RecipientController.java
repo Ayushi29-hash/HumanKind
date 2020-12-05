@@ -84,10 +84,15 @@ public class RecipientController extends HttpServlet {
 				request.setAttribute("NOTIFICATION", "DONOR DETAILS");
 				//Register driver = new Register();
 				//System.out.println("hello" +driver.getFirstName());
+				request.setAttribute("DONOR","Donor Name:");
 				request.setAttribute("NAME",patient.getFirstName());
+				request.setAttribute("GENDER","Gender:");
 				request.setAttribute("VTYPE",patient.getGender());
+				request.setAttribute("BLOOD","Blood Type:");
 				request.setAttribute("VNUM",patient.getBloodgrp());
+				request.setAttribute("CONTACT","Contact:");
 				request.setAttribute("PHONE",patient.getPhoneno());
+				request.setAttribute("INFO","PLEASE contact the donor for donation!");
 				
 				}
 			}

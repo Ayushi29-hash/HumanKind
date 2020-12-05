@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-	
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,14 +10,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Recipient</title>
-    <style>
-		body {
-		  background-image: url('Request.jpg');
+    <title>HumanKind</title>
+		<style>
+		/*body {
+		  background-image: url('img.jpg');
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
 		  background-size: cover;
-		}
+		}*/
 		
 		* {
 				font-family: 'Montserrat', sans-serif;
@@ -124,11 +123,15 @@
 				transform: translateY(8px);
 				text-decoration: underline;
 			}
+		
 		</style>
+
+
   </head>
-<body>
-	
+  <body>
+    
 	<nav class="navbar navbar-expand-lg   navbar-dark sticky-top" style="background-color: #E78F8E;">
+		
 		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp"><strong>HumanKind</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -144,8 +147,7 @@
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/avail">Avail</a></li>
 				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/donor">Donor</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/recipient">Recipient</a></li>
-				-->
+				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/recipient">Recipient</a></li>-->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -162,122 +164,100 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%= request.getContextPath() %>/donor">Donor</a> <a
 							class="dropdown-item" href="<%= request.getContextPath() %>/recipient">Recipient</a>
-							
 						
 					</div></li>
-				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/about/about.jsp">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/contact/contact.jsp">Contact Us</a></li>
+					<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/about/about.jsp">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="<%= request.getContextPath() %>/contact/contact.jsp">Contact Us</a></li>
 			</ul>
 			
 		</div>
 	</nav>
 	
+
+	<div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img src="https://t3.ftcdn.net/jpg/02/22/85/22/240_F_222852271_0TZreU6UH9hp2Tko1Myk760r8LNYiMzZ.jpg" class="d-block w-100" style="height: 550px;"alt="...">
+	    </div>
+	    
+	  </div>
+	  <br>
 	
-	<div class="container">
-
-	<h2>Blood Recipient Form</h2>
-	<div class="col-md-6 col-md-offset-3">
-			<div class="alert alert-success center" role="alert">
-				<p>${NOTIFICATION}</p>
-				<p>${DONOR}</p>
-				<p>${NAME}</p>
-				<p>${GENDER}</p>
-				<p>${VTYPE}</p>
-				
-				<p>${BLOOD}</p>
-				<p>${VNUM}</p>
-				<p>${CONTACT}</p>
-				<p>${PHONE}</p>
-				<p>${INFO}</p>
-			
-		        
-			</div>
-			 	
-		<form action="<%=request.getContextPath()%>/recipient" method="post">
-
-					<div class="form-group">
-						<label for="uname">First Name:</label> <input type="text"
-							class="form-control" id="uname" placeholder="First Name"
-							name="firstName" required>
-					</div>
-
-					<div class="form-group">
-						<label for="uname">Last Name:</label> <input type="text"
-							class="form-control" id="lastname" placeholder="last Name"
-							name="lastName" required>
-					</div>
-					
-					<div class="form-group">
-   						 <label for="exampleFormControlSelect1">Gender</label>
-   						 <select class="form-control" id="gender" name="gender" required>
-     					 <option> </option>
-     					 <option>Male</option>
-     					 <option>Female</option>     					 
-   						 </select>
-                    </div>	
-					
-					<div class="form-group">
-						<label for="uname">Age:</label> <input type="text"
-							class="form-control" id="age" placeholder="Age"
-							name="age" required>
-					</div>
-					
-					<div class="form-group">
-						<label>Date of Birth:</label> <input type="date"
-						value="<c:out value='${patient.dob}' />"class="form-control" id="dob" placeholder="Date of Birth"
-							name="dob" required>
-					</div>
-					
-					<div class="form-group">
-   						 <label for="exampleFormControlSelect1">Blood Group</label>
-   						 <select class="form-control" id="bloodgrp" name="bloodgrp" required>
-     					 <option> </option>
-     					 <option>A+</option>
-     					 <option>A-</option>
-    				  	 <option>B+</option>
-     					 <option>B-</option>
-     					 <option>AB+</option>
-     					 <option>AB-</option>
-     					 <option>O+</option>
-     					 <option>O-</option>
-   						 </select>
-                    </div>	
-
-					<div class="form-group">
-						<label for="uname">Phone Number:</label> <input type="text"
-							class="form-control" id="phoneno" placeholder="Phone Number"
-							name="phoneno" required>
-					</div>
+	<!--Services offered--> 
 	
+	
+	<section id="services_offered" class="container">
+		     <h1 align="center"><strong>HumanKind</strong>: where life continues!</h1>
+			<hr>
+			<div class="media">
+				<img src="HumanKind.png" class="mr-3" alt="..." width="500" height="300">
+				<div class="media-body">
 					
-					
-					<div class="form-group">
-						<label for="uname">State:</label> <input type="text"
-							class="form-control" id="state" placeholder="State"
-							name="state" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="uname">City:</label> <input type="text"
-							class="form-control" id="city" placeholder="City"
-							name="city" required>
-					</div>
-					
-					 
-			
-                         <button type="submit" class="btn btn-primary">Submit</button>
-				
+					<p>A Platform with a cause. That is how we define ourselves. Our goal is to save lives by helping people get Ambulance in the shortest possible time at the lowest cost, and become the defacto platform for Blood donations and recipients</p>
 
-
-
-			</form>
+					<p>Just like how easy it is to get a cab or order food, so should be getting an Ambulance when in need of any kind of medical transport</p>
+					
+					<p>In an emergency, the last thing you wish for is delay. We have our ambulance providers who are always on go with their vehicles. With HumanKind you get to choose the type of the ambulance that you want, and the features that you need. Our advanced algorithms help you get the Driver with the Ambulance that matches your requirements in the shortest possible time.</p>
+					
+					<p>We believe each life matters!</p>
+				</div>
 			</div>
-		</div>
+			
+
+	</section>
+	<br>
+	<br>
+	
 		
-		<br>
-		<br>
-		
- 	<section id="contact" class="contact-section">
+		<div class="container">
+		<h1 align="center">Brains behind HumanKind</h1>
+		<hr>
+    <div class="card-deck">
+        <div class="card text-center">
+            <div class="card-block">
+            <img src="ayush.JPG" class="card-img-top " alt="...">
+                
+            </div>
+            <div class="card-footer">
+                Ayush Shah
+            </div>
+        </div>
+
+        <div class="card text-center">
+            <div class="card-block">
+            <img src="ayushi.jpeg" class="card-img-top " alt="...">
+                
+            </div>
+            <div class="card-footer">
+                Ayushi S
+            </div>
+        </div>
+
+        <div class="card text-center">
+            <div class="card-block">
+            <img src="likeith.jpeg" class="card-img-top " alt="...">
+                
+            </div>
+            <div class="card-footer">
+                B Likeith 
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-block">
+            <img src="basavesh.jpeg" class="card-img-top " alt="...">
+                
+            </div>
+            <div class="card-footer">
+                Basavesh M
+            </div>
+        </div>
+    </div>
+    </div>
+		<hr>
+	
+	
+	
+	
+	<section id="contact" class="contact-section">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -321,7 +301,7 @@
 
 	<div class="row">
 		<div class="col-sm-4">
-		<img src="HumanKind.png" class="img-fluid img-responsive">
+		<img src="HumanKind.png" class="img-fluid img-responsive"  height="100" >
 	</div>
 		<div class="col-sm-4 text-center" >
 			<h2 style="font-size: 24px;">Links</h2>
@@ -346,6 +326,7 @@
 	<p class="text-center">Made with &hearts; in India</p>
 	</footer>
 	</div>
+
 	<!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -357,10 +338,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
-	
-	
-
-	
-</body>
-
+  </body>
 </html>
