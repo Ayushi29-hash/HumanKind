@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>HumanKind</title>
+    <title>Contact Us</title>
 		<style>
 		/*body {
 		  background-image: url('img.jpg');
@@ -131,6 +131,8 @@
   </head>
   <body>
     
+    <!-- NAVBAR -->
+    
 	<nav class="navbar navbar-expand-lg   navbar-dark sticky-top" style="background-color: #E78F8E;">
 		
 		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp"><strong>HumanKind</strong></a>
@@ -174,6 +176,7 @@
 		</div>
 	</nav>
 	
+	<!-- CAROUSEL -->
 
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 	  <ol class="carousel-indicators">
@@ -189,10 +192,11 @@
 	  
 	</div>
 	
-	<!--Services offered--> 
+	 
 	<br>
 	<br>
 	
+	<!-- CONTACT US FORM -->
 	
 	<section id="services_offered" class="container">
 		     <h1 align="center">We are in this together!</h1>
@@ -247,7 +251,7 @@
 		
 		
 	
-	
+	<!-- CONTACT US SECTION -->
 	
 	<section id="contact" class="contact-section">
         
@@ -287,6 +291,8 @@
             <h5>Mail us: justdoit@gmail.com</h5>
           </div> -->
     </section>
+    
+    <!-- FOOTER SECTION -->
     
 <div style="background-image: url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg'); background-size: 100% 100%;">
 <footer class="container"  >

@@ -130,6 +130,8 @@
   </head>
   <body>
     
+    <!-- NAVBAR -->
+    
 	<nav class="navbar navbar-expand-lg   navbar-dark sticky-top" style="background-color: #E78F8E;">
 		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp"><strong>HumanKind</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -172,7 +174,8 @@
 		</div>
 	</nav>
 	
-
+	<!-- CAROUSEL -->
+	
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 	  <ol class="carousel-indicators">
 	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -288,6 +291,7 @@ We being your health partners will ensure you never waste those precious golden 
 	</section>
 	<br>
 	<br>
+	<!-- CONTACT US SECTION -->
 	
 	<section id="contact" class="contact-section">
         
@@ -327,6 +331,8 @@ We being your health partners will ensure you never waste those precious golden 
             <h5>Mail us: justdoit@gmail.com</h5>
           </div> -->
     </section>
+    
+    <!-- FOOTER SECTION -->
     
 <div style="background-image: url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg'); background-size: 100% 100%;">
 <footer class="container"  >

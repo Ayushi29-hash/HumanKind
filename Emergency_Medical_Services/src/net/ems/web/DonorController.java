@@ -1,5 +1,7 @@
+//This file is servlet for connection to a web page
 package net.ems.web;
 
+//Importing the required libraries
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -16,9 +18,7 @@ import net.ems.model.Donor;
 
 
 @WebServlet("/donor")
-//public class DonorController {
-//	
-//}
+
 public class DonorController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Blood_DonorDao userDao;
@@ -71,7 +71,7 @@ public class DonorController extends HttpServlet {
 			int result = userDao.registerDonor(blood);
 			if(result == 1) {
 				request.setAttribute("NOTIFICATION", "Donor Registered Successfully!");
-				//request.setAttribute("driver", "drivername!");
+				
 			}
 			
 		} catch (Exception e) {

@@ -1,11 +1,10 @@
 package net.ems.model;
 
-//public class Register {
-//
-//}
+//Importing the required libraries
 import java.io.Serializable;
 import java.time.LocalDate;
 
+//Declaring all the variables required to perform the Registering operation
 public class Register implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String firstName;
@@ -16,6 +15,8 @@ public class Register implements Serializable {
 	private String dlno;
 	private String vehicleno;
 	private String vehicletype;
+	
+	//Generating Getter-Setter
 	
 	public String getFirstName() {
 		return firstName;

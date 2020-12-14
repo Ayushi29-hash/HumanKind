@@ -1,22 +1,25 @@
+//This file established connection between the database and java file for INSERT query.
+
+
 package net.ems.dao;
 
+//Importing the required libraries
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import net.ems.model.Avail;
 import net.ems.utils.JDBCUtils;
 
 public class Ambulance_AvailDao {
+	//To perform INSERT query.
 	public int registerAvail(Avail customer) throws ClassNotFoundException {
 		String INSERT_BOOK_SQL = "INSERT INTO avail"
 				+ "  (name, phone_no, pick_up, drop_loc, vehicle_type ) VALUES "
-				+ " (?, ?, ?, ?, ?);";
-
+				+ " (?, ?, ?, ?, ?);";      
+		
 		int result = 0;
 		try (Connection connection = JDBCUtils.getConnection();
-				// Step 2:Create a statement using connection object
+				//Creating a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_BOOK_SQL)) {
 			preparedStatement.setString(1, customer.getName());
 			preparedStatement.setString(2, customer.getPhoneno());
@@ -27,7 +30,7 @@ public class Ambulance_AvailDao {
 			
 
 			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
+			// Execute the query or update query
 			result = preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {

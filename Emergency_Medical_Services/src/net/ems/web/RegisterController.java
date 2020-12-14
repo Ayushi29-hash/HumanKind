@@ -1,6 +1,7 @@
+//This file is servlet for connection to a web page
 package net.ems.web;
 
-
+//Importing the required libraries
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -39,7 +40,6 @@ public class RegisterController extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String phoneno = request.getParameter("phoneno");
-		//LocalDate dob = request.getParameter("dob");
 		LocalDate dob = LocalDate.parse(request.getParameter("dob"));
 		String aadharno = request.getParameter("aadharno");
 		String dlno = request.getParameter("dlno");
@@ -64,7 +64,7 @@ public class RegisterController extends HttpServlet {
 			}
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 

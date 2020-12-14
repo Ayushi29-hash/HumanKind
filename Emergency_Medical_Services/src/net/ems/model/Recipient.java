@@ -1,16 +1,10 @@
-//package net.ems.model;
-//
-//public class Recipient {
-//
-//}
 package net.ems.model;
 
-//public class Recipient {
-	
-
+//Importing the required libraries
 import java.io.Serializable;
 import java.time.LocalDate;
 
+//Declaring all the variables required to perform the Recipient operation
 public class Recipient implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String firstName;
@@ -22,6 +16,9 @@ public class Recipient implements Serializable{
 	private String phoneno;
 	private String state;
 	private String city;
+	
+	//Generating Getter-Setter
+	
 	public String getFirstName() {
 		return firstName;
 	}

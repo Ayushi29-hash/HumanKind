@@ -1,21 +1,15 @@
-//package net.ems.dao;
-//
-//public class Blood_RecipientDao {
-//
-//}
+//This file established connection between the database and java file for INSERT query.
 
 package net.ems.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
 import java.sql.SQLException;
-
-//import net.ems.model.Donor;
 import net.ems.model.Recipient;
 import net.ems.utils.JDBCUtils;
 
 public class Blood_RecipientDao {
+	//To perform INSERT query
 	public int registerRecipient(Recipient cust) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO patient"
 				+ "  (first_name, last_name, gender, age, dob, blood_grp, phone_no, state, city) VALUES "
@@ -23,7 +17,7 @@ public class Blood_RecipientDao {
 
 		int result = 0;
 		try (Connection connection = JDBCUtils.getConnection();
-				// Step 2:Create a statement using connection object
+				// Creating a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 			preparedStatement.setString(1, cust.getFirstName());
 			preparedStatement.setString(2, cust.getLastName());
@@ -39,7 +33,7 @@ public class Blood_RecipientDao {
 			
 
 			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
+			// Execute the query or update query
 			result = preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {

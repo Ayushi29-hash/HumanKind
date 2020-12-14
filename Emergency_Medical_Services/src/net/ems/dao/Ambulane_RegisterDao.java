@@ -1,5 +1,8 @@
+//This file established connection between the database and java file for INSERT and SELECT query.
+
 package net.ems.dao;
 
+//Importing the required libraries
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +12,7 @@ import net.ems.utils.JDBCUtils;
 
 
 public class Ambulane_RegisterDao {
-		
+	//To perform INSERT query.
 	public int registerEmployee(Register employee) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO users"
 				+ "  (first_name, last_name, phone_no, dob, aadhar_no, dl_no, vehicle_no, vehicle_type ) VALUES "
@@ -17,8 +20,8 @@ public class Ambulane_RegisterDao {
 
 		int result = 0;
 		try (Connection connection = JDBCUtils.getConnection();
-				// Step 2:Create a statement using connection object
-				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
+				//Creating a statement using connection object
+			PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 			preparedStatement.setString(1, employee.getFirstName());
 			preparedStatement.setString(2, employee.getLastName());
 			preparedStatement.setString(3, employee.getPhoneno());
@@ -31,7 +34,7 @@ public class Ambulane_RegisterDao {
 			
 
 			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
+			//Execute the query or update query
 			result = preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {
@@ -42,10 +45,11 @@ public class Ambulane_RegisterDao {
 	}
 	
 	public Register registerEmployee(String vtype) throws ClassNotFoundException {
+		//To perform SELECT query.
 		String SELECT_USER_SQL = "SELECT first_name,phone_no,vehicle_no,vehicle_type FROM demo.users where vehicle_type=? ORDER BY RAND()";
 		Register driver = new Register();
 		try (Connection connection = JDBCUtils.getConnection();
-				// Step 2:Create a statement using connection object
+				// Creating a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_SQL)) {
 			preparedStatement.setString(1, vtype);
 			ResultSet resultop = preparedStatement.executeQuery();

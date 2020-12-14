@@ -1,9 +1,9 @@
 package net.ems.model;
 
+//Importing the required libraries
 import java.io.Serializable;
-//import java.time.LocalDate;
 
-
+//Declaring all the variables required to perform the Booking operation 
 public class Avail implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String Name;
@@ -11,6 +11,8 @@ public class Avail implements Serializable{
 	private String pickup;
 	private String drop;
 	private String vehicle_type;
+	
+	//Generating Getter-Setter
 	
 	public String getName() {
 		return Name;
@@ -45,8 +47,5 @@ public class Avail implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
-	
-	
+		
 }

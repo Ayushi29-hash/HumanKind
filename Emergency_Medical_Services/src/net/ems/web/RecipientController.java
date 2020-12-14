@@ -1,5 +1,7 @@
+//This file is servlet for connection to a web page
 package net.ems.web;
 
+//Importing the required libraries
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -80,10 +82,8 @@ public class RecipientController extends HttpServlet {
 				else {
 					
 				
-				//int result = userDao.
+				
 				request.setAttribute("NOTIFICATION", "DONOR DETAILS");
-				//Register driver = new Register();
-				//System.out.println("hello" +driver.getFirstName());
 				request.setAttribute("DONOR","Donor Name:");
 				request.setAttribute("NAME",patient.getFirstName());
 				request.setAttribute("GENDER","Gender:");

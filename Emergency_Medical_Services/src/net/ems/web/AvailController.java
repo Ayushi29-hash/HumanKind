@@ -1,5 +1,8 @@
+//This file is servlet for connection to a web page
+
 package net.ems.web;
 
+//Importing the required Libraries
 import java.io.IOException;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -11,7 +14,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 
 import net.ems.dao.Ambulance_AvailDao;
 import net.ems.dao.Ambulane_RegisterDao;
@@ -70,6 +72,8 @@ public class AvailController extends HttpServlet {
 					request.setAttribute("NOTIFICATION","Ambulance not available at the moment, try again later!");
 				}
 				else {
+					
+					//Randomly Generating Distance For Calculating The Fare
 					Random rand = new Random();
 					double rand_int1 = rand.nextDouble()*20; 
 					 DecimalFormat df = new DecimalFormat("#");
@@ -80,10 +84,8 @@ public class AvailController extends HttpServlet {
 					String str1 = "ALS",str2="BLS",str3="PTS";
 					
 				
-				//int result = userDao.
+				
 				request.setAttribute("NOTIFICATION", "AMBULANCE DETAILS!");
-				//Register driver = new Register();
-				//System.out.println("hello" +driver.getFirstName());
 				request.setAttribute("DRIVER","Driver Name:");
 				request.setAttribute("NAME",driver.getFirstName());
 				request.setAttribute("CONTACT","Contact:");
@@ -94,6 +96,7 @@ public class AvailController extends HttpServlet {
 				request.setAttribute("VTYPE",driver.getVehicletype());
 				request.setAttribute("PRICE","Please pay the below displayed fare in Indian Rupees");
 				
+				//Logic for Fare CalCulating
 				if(driver.getVehicletype().equals(str1))
 				{
 					basic=250;

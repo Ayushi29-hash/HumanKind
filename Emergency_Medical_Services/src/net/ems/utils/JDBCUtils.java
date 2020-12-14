@@ -1,5 +1,6 @@
 package net.ems.utils;
 
+//Importing the required libraries
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -8,21 +9,21 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class JDBCUtils {
+	
+	//Connection for local database
+	private static String jdbcURL = "jdbc:mysql://localhost:3306/demo"; //url to connect to the local database
+	private static String jdbcUsername = "root";  //Username of the local database
+	private static String jdbcPassword = "ayush"; //Password of the local database
 
-	private static String jdbcURL = "jdbc:mysql://localhost:3306/demo";
-	private static String jdbcUsername = "root";
-	private static String jdbcPassword = "ayush";
-
+	//To establish connection between the database and Java
 	public static Connection getConnection() {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return connection;

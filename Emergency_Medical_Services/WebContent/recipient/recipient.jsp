@@ -128,6 +128,8 @@
   </head>
 <body>
 	
+	<!-- NAVBAR -->
+	
 	<nav class="navbar navbar-expand-lg   navbar-dark sticky-top" style="background-color: #E78F8E;">
 		<a class="navbar-brand" href="<%= request.getContextPath() %>/home/index.jsp"><strong>HumanKind</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -172,6 +174,7 @@
 		</div>
 	</nav>
 	
+	<!-- BLOOD RECIPIENT FORM -->
 	
 	<div class="container">
 
@@ -277,6 +280,8 @@
 		<br>
 		<br>
 		
+		<!-- CONTACT US SECTION -->
+		
  	<section id="contact" class="contact-section">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -315,7 +320,7 @@
             <h5>Mail us: justdoit@gmail.com</h5>
           </div> -->
     </section>
-    
+    <!-- FOOTER SCETION -->
 <div style="background-image: url('https://t3.ftcdn.net/jpg/03/00/40/08/240_F_300400890_gIVeecUgaknasaavuK1xYtUudTv6Qalw.jpg'); background-size: 100% 100%;">
 <footer class="container"  >
 

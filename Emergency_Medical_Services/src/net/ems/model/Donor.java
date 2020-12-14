@@ -1,8 +1,10 @@
 package net.ems.model;
 
+//Importing the required libraries
 import java.io.Serializable;
 import java.time.LocalDate;
 
+//Declaring all the variables required to perform the Donation
 public class Donor implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String firstName;
@@ -17,6 +19,8 @@ public class Donor implements Serializable{
 	private String aids;
 	private String cancer;
 	private String pierce;
+	
+	//Generating Getter-Setter
 	
 	public String getFirstName() {
 		return firstName;
@@ -93,6 +97,4 @@ public class Donor implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
 }
