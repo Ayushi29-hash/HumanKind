@@ -42,7 +42,7 @@ In the current situation, people are not able to avail proper medical services. 
 
 ## Description
 
-- The file inside `net.ems.utils` package establishes the connection with the database
+- The file inside `net.ems.utils` package establishes the connection with the database. 
 - All the files in package `net.ems.dao` establishes the connection with their respective tables to perform the required query.
 - All the files in `net.ems.model` package declare their respective variables.
 - All the files in `net.ems.web` package are servlets to connect to JSP and Java file.
