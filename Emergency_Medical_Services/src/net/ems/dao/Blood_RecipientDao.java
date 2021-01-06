@@ -1,5 +1,5 @@
 //This file established connection between the database and java file for INSERT query.
-
+//This file is part of dao pacakge
 package net.ems.dao;
 
 import java.sql.Connection;

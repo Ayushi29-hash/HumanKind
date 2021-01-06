@@ -98,7 +98,7 @@ public class RecipientController extends HttpServlet {
 			}
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			// Auto-generated catch block
 			e.printStackTrace();
 		}
 

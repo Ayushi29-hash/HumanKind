@@ -81,7 +81,7 @@ public class AvailController extends HttpServlet {
 					double Km=rand_int1;
 					double fare=0;
 					int a=1,basic=0;
-					String str1 = "ALS",str2="BLS",str3="PTS";
+					String str1 = "PTS",str2="BLS",str3="ALS";
 					
 				
 				
